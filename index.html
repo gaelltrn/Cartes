@@ -91,6 +91,10 @@ const GROUPS = [
   ]},
   { t: 'Hydrographie & géologie', l: [
     { id: 'hydro', n: 'Hydrographie (BD TOPO)', d: 'Réseau hydrographique', ...ign('HYDROGRAPHY.HYDROGRAPHY', 'image/png', { minZoom: 6 }) },
+    { id: 'bv', n: 'Bassins versants (BD TOPAGE)', d: 'Bassins versants topographiques',
+  wms: 'https://services.sandre.eaufrance.fr/geo/topage2024?',
+  layers: 'BassinVersantTopographique_FXX_Topage2024',
+  opt: { attribution: '© Sandre / OFB / IGN' } },
     { id: 'geol', n: 'Géologie BRGM (WMS)', op: 0.6, leg: 'https://geoservices.brgm.fr/geologie?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&LAYER=GEOLOGIE', d: 'Carte géologique harmonisée',
       wms: 'https://geoservices.brgm.fr/geologie', layers: 'GEOLOGIE', opt: { attribution: '© BRGM' } },
     { id: 'inpg', n: 'Patrimoine géologique (INPG)', op: 0.6, d: 'Sites géologiques inventoriés (dont géomorphologiques)', ...patrinat('Patrinat_INPG') },
