@@ -90,7 +90,7 @@ const GROUPS = [
       opt: { maxNativeZoom: 16, maxZoom: 20, attribution: 'Esri' } }
   ]},
   { t: 'Hydrographie & géologie', l: [
-    { id: 'hydro', n: 'Hydrographie (BD Topage)', d: 'Réseau hydrographique', ...ign('HYDROGRAPHY.HYDROGRAPHY') },
+    { id: 'hydro', n: 'Hydrographie (BD TOPO)', d: 'Réseau hydrographique', ...ign('HYDROGRAPHY.HYDROGRAPHY', 'image/png', { minZoom: 6 }) },
     { id: 'geol', n: 'Géologie BRGM (WMS)', op: 0.6, leg: 'https://geoservices.brgm.fr/geologie?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetLegendGraphic&FORMAT=image/png&LAYER=GEOLOGIE', d: 'Carte géologique harmonisée',
       wms: 'https://geoservices.brgm.fr/geologie', layers: 'GEOLOGIE', opt: { attribution: '© BRGM' } },
     { id: 'inpg', n: 'Patrimoine géologique (INPG)', op: 0.6, d: 'Sites géologiques inventoriés (dont géomorphologiques)', ...patrinat('Patrinat_INPG') },
